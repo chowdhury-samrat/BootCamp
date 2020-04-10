@@ -1,0 +1,16 @@
+package dpHybridmodel;
+
+import java.io.IOException;
+
+import resources.pageElements;
+
+public static void T02_pageLogin() {
+	public static void userLoginpage(String[] args2) throws IOException
+	{
+		driver = intializeDriver();
+		driver.get(prop.getProperty("url"));
+		pageElements pe=new pageElements(driver);
+		pe.getUserlogin().click();
+	}
+
+}

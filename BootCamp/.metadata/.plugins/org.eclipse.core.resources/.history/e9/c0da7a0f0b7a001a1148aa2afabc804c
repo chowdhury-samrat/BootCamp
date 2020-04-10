@@ -1,0 +1,13 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+
+public class fedexElements {
+	WebDriver driver;
+
+
+public fedexElements(WebDriver driver)
+{
+	this.driver=driver;
+}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="FedexRegistrationPage" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="cucumberOptions.TestRunner" time="6.959">
+    <testsuite name="Feature: Complete Fedex registration process" time="6.959">
+      <testsuite name="Scenario: Sucessfull login with valid User information" time="6.959">
+        <testcase name="Given User Launch Chrome Browser" classname="Scenario: Sucessfull login with valid User information" time="5.309"/>
+        <testcase name="When User opens Fedex Registration page URL &quot;https://www.fedex.com/fcl/web/jsp/contactInfo1.jsp?appName=oadr&amp;locale=ca_en&amp;step3URL=https%3A%2F%2Fwww.fedex.com%2Ffcl%2FExistingAccountFclStep3&amp;afterwardsURL=https%3A%2F%2Fwww.fedex.com%2Ffcl%2Foptionhome&amp;programIndicator=bb11030210&quot;" classname="Scenario: Sucessfull login with valid User information" time="1.076"/>
+        <testcase name="When User enters following required information for registration" classname="Scenario: Sucessfull login with valid User information" time="0.255"/>
+        <testcase name="When User add remaining information for State, Country, Secret question" classname="Scenario: Sucessfull login with valid User information" time="0.246"/>
+        <testcase name="When User acknowledge Terms and Conditions and click on Create a user ID tab button" classname="Scenario: Sucessfull login with valid User information" time="0.001"/>
+        <testcase name="Then Complete registration on fedex portal" classname="Scenario: Sucessfull login with valid User information" time="0.072"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

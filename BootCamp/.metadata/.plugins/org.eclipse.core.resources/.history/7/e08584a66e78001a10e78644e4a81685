@@ -1,0 +1,39 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import pageObjects.fbHomepageelements;
+
+public class HomePageValidation {
+
+	WebDriver driver;
+
+	@BeforeMethod
+	public void homePage() {
+		System.setProperty("webdriver.chrome.driver", "C:\\automation\\drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/");
+
+	}
+
+	@Test(priority = 1)
+	public void PageValidation() {
+
+		String title = driver.getTitle();
+		System.out.println("the page title is: " + title);
+		fbHomepageelements fbhe=new fbHomepageelements(driver);
+		fbhe.getFirstname().sendKeys("samrat");
+
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

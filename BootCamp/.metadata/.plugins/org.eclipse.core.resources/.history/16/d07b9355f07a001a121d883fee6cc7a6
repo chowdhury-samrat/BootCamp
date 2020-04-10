@@ -1,0 +1,24 @@
+package dpHybridmodel;
+
+import java.io.IOException;
+
+import Utilities.browsers;
+import resources.pageElements;
+
+public class T02_pageLogin extends browsers{
+
+	public static void main(String[] args) throws IOException {
+		
+			driver = intializeDriver();
+			driver.get(prop.getProperty("url"));
+			pageElements pe=new pageElements(driver);
+			pe.getUserlogin().click();
+			pe.getEmail().sendKeys("chysam@ymail.com");
+			pe.getPassword().sendKeys("abcdef*123456");
+			pe.getCheckbox().click();
+			pe.getSiginin().click();
+		
+
+	}
+
+}

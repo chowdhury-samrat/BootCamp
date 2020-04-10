@@ -1,0 +1,24 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class dropDown1 {
+WebDriver driver;
+
+Select sel1=new Select(driver.findElement(By.xpath("//select[@id='month']")));
+Select sel2=new Select(driver.findElement(By.xpath("//select[@id='day']")));
+public dropDown1()
+{
+	sel1.selectByIndex(3);
+}
+
+
+
+public void dropDownday()
+{
+	sel2.selectByIndex(3);
+}
+
+}

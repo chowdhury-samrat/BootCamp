@@ -1,0 +1,47 @@
+package stepDefinations;
+
+import cucumber.api.DataTable;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.And;
+import cucumber.api.junit.Cucumber;
+import utilities.base;
+
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+public class stepDefination extends base{
+
+	@Given("^User Launch Chrome Browser$")
+    public void user_launch_chrome_browser() throws Throwable {
+        System.out.println("hello");
+    }
+
+    @When("^User opens Fedex Registration page URL \"([^\"]*)\"$")
+    public void user_opens_fedex_registration_page_url_something(String strArg1) throws Throwable {
+    	System.out.println("my");
+    }
+
+    @When("^User enters following required information for registration$")
+    public void user_enters_following_required_information_for_registration() throws Throwable {
+    	System.out.println("name");
+    }
+
+    @When("^User add remaining information for State, Country, Secret question$")
+    public void user_add_remaining_information_for_state_country_secret_question() throws Throwable {
+    	System.out.println("isa");
+    }
+
+    @When("^User choose \"([^\"]*)\" tab$")
+    public void user_choose_something_tab(String strArg1) throws Throwable {
+    	System.out.println("ayansh");
+    }
+
+    @Then("^complete registration by clicking on continue tab$")
+    public void complete_registration_by_clicking_on_continue_tab() throws Throwable {
+    	System.out.println("chowdhury");
+    }
+
+}

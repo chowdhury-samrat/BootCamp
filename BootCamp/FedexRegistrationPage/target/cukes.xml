@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="15.812548">
+    <testcase classname="Complete Fedex registration process" name="Sucessfull login with valid User information" time="15.812548">
+        <system-out>
+            <![CDATA[Given User Launch Chrome Browser............................................passed
+When User opens Fedex Registration page URL "https://www.fedex.com/fcl/web/jsp/contactInfo1.jsp?appName=oadr&locale=ca_en&step3URL=https%3A%2F%2Fwww.fedex.com%2Ffcl%2FExistingAccountFclStep3&afterwardsURL=https%3A%2F%2Fwww.fedex.com%2Ffcl%2Foptionhome&programIndicator=bb11030210".passed
+When User enters following required information for registration............passed
+When User add remaining information for State, Country, Secret question.....passed
+When User acknowledge Terms and Conditions and click on Create a user ID tab button.passed
+Then Complete registration on fedex portal..................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

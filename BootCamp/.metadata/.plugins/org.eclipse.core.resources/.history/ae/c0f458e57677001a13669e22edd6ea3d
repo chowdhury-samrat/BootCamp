@@ -1,0 +1,49 @@
+package DigitalPointTech.Validation;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePageElements;
+import pageObjects.qaoutsourcingpage;
+import resources.base;
+
+public class HomePage extends base{
+	
+
+	@Test
+	public void basePageNavigation() throws IOException{
+		driver=intializeDriver();
+		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();
+		
+		HomePageElements hpe=new HomePageElements(driver);
+		hpe.getHome().click();
+		hpe.getKnowledgecenter().click();
+		hpe.getContactus().click();
+		
+		qaoutsourcingpage qosp= new qaoutsourcingpage(driver);
+		qosp.getFreequote().click();
+		qosp.getFirstname().sendKeys("samrat");
+		qosp.getLastname().sendKeys("chowdhury");	
+		qosp.getComemail().sendKeys("chysam099@gmail.com");
+		qosp.getPhonenum().sendKeys("4036671666");
+		WebElement element=driver.findElement(By.xpath("//select[@name='services']"));
+		Select sel=new Select(element);
+		sel.selectByValue("Automation Testing");
+		qosp.getDescrip().sendKeys("bootcamp");
+		qosp.getSubmit().click();
+	}
+	
+	@AfterTest
+	public void teardown()
+	{
+		driver.close();
+	}
+	
+}
+																						

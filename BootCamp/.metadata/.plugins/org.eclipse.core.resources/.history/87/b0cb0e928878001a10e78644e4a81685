@@ -1,0 +1,37 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class signUpelements {
+
+	WebDriver driver;
+	
+	
+By firstname=By.xpath("//input[@id='u_0_m']");
+By lastname=By.xpath("//input[@id='u_0_o']");
+By mobilenumber=By.xpath("//input[@id='u_0_r']");
+By password=By.xpath("//input[@id='u_0_o']");
+
+WebElement day=driver.findElement(By.id("day"));
+
+Select sel1=new Select(driver.findElement(By.xpath("//select[@id='month']")));
+sel1.
+	
+	
+	
+public signUpelements(WebDriver driver) {
+
+	this.driver=driver;
+}
+
+	public WebElement getFirstname()
+	{
+		return driver.findElement(firstname);
+	}
+
+	
+}

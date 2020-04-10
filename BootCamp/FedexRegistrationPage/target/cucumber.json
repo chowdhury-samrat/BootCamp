@@ -1,0 +1,119 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Sucessfull login with valid User information",
+        "description": "",
+        "id": "complete-fedex-registration-process;sucessfull-login-with-valid-user-information",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8936220200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User Launch Chrome Browser",
+            "match": {
+              "location": "stepDefination.user_launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5304055300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User opens Fedex Registration page URL \"https://www.fedex.com/fcl/web/jsp/contactInfo1.jsp?appName\u003doadr\u0026locale\u003dca_en\u0026step3URL\u003dhttps%3A%2F%2Fwww.fedex.com%2Ffcl%2FExistingAccountFclStep3\u0026afterwardsURL\u003dhttps%3A%2F%2Fwww.fedex.com%2Ffcl%2Foptionhome\u0026programIndicator\u003dbb11030210\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.fedex.com/fcl/web/jsp/contactInfo1.jsp?appName\u003doadr\u0026locale\u003dca_en\u0026step3URL\u003dhttps%3A%2F%2Fwww.fedex.com%2Ffcl%2FExistingAccountFclStep3\u0026afterwardsURL\u003dhttps%3A%2F%2Fwww.fedex.com%2Ffcl%2Foptionhome\u0026programIndicator\u003dbb11030210",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefination.user_opens_fedex_registration_page_url_something(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1074611900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters following required information for registration",
+            "match": {
+              "location": "stepDefination.user_enters_following_required_information_for_registration(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Samrat",
+                  "Chowdhury",
+                  "xyz@gmail.com",
+                  "xyz@gmail.com",
+                  "2672 Capitoll Hill Cres",
+                  "Calgary",
+                  "T3J2V9",
+                  "4032232323",
+                  "samchy",
+                  "Adi2Sam",
+                  "Adi2Sam",
+                  "bangladesh"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 253712500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User add remaining information for State, Country, Secret question",
+            "match": {
+              "location": "stepDefination.user_add_remaining_information_for_state_country_secret_question()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 243866500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User acknowledge Terms and Conditions and click on Create a user ID tab button",
+            "match": {
+              "location": "stepDefination.User_acknowledge_Terms_and_Conditions_and_click_on_Create_a_user_ID_tab_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 81800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Complete registration on fedex portal",
+            "match": {
+              "location": "stepDefination.complete_registration_on_fedex_portal()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Complete Fedex registration process",
+    "description": "",
+    "id": "complete-fedex-registration-process",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  }
+]

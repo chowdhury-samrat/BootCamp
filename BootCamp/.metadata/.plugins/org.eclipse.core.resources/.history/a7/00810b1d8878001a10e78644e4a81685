@@ -1,0 +1,47 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+
+import pageObjects.signUpelements;
+
+
+
+public class HomePageValidation {
+
+	WebDriver driver;
+
+	@BeforeTest
+	public void homePage() {
+		System.setProperty("webdriver.chrome.driver", "C:\\automation\\drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/");
+		String title = driver.getTitle();
+		System.out.println("the page title is: " + title);
+
+	}
+
+	@Test
+	public void PageValidation() {
+
+		String title = driver.getTitle();
+		System.out.println("the page title is: " + title);
+		signUpelements sp=new signUpelements(driver);
+		sp.getFirstname().sendKeys("samrat");
+		
+		
+
+	
+
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

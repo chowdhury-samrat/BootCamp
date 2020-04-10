@@ -1,0 +1,25 @@
+package DigitalPointTech.Validation;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import pageObjects.HomePageElements;
+import resources.base;
+
+public class HomePage extends base{
+	
+
+	@Test
+	public void basePageNavigation() throws IOException{
+		driver=intializeDriver();
+		driver.get("https://digitalpoint.tech/sqa/");
+		driver.manage().window().maximize();
+		
+		HomePageElements hpe=new HomePageElements(driver);
+		hpe.getHome().click();
+		hpe.getKnowledgecenter().click();
+		hpe.getContactus().click();
+	}
+}
+																						

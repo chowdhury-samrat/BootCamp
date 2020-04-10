@@ -1,0 +1,62 @@
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePageElements;
+import resources.base;
+
+public class T03_LogOffProcess extends base {
+
+	WebDriver driver;
+
+	@BeforeTest
+	public void homePage() throws IOException {
+		driver = intializeDriver();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("url"));
+		String title = driver.getTitle();
+		System.out.println("The page title is: " + title);
+		
+		
+	}
+
+	@Test(priority=3)
+	public void PageValidation() throws InterruptedException, AWTException {
+		HomePageElements hpe = new HomePageElements(driver);
+		hpe.getEmail().sendKeys("chysam099@gmail.com");
+		hpe.getPassword().sendKeys("samsam09");
+		hpe.getLogin().click();
+		Thread.sleep(4000);
+		Robot robot = new Robot();
+		robot.delay(5000);
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		driver.findElement(By.cssSelector("#userNavigationLabel")).click();
+		driver.findElement(By.id("logoutMenu")).click();
+		
+		//WebElement logoff=driver.findElement(By.cssSelector("#userNavigationLabel"));
+		//Select sel=new Select(logoff);
+		//sel.selec
+	}
+
+	/*@AfterTest
+	public void tearDown() {
+		driver.quit();*/
+
+	}
+
+

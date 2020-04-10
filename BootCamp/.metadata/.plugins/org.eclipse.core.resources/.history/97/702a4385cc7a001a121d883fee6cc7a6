@@ -1,0 +1,68 @@
+package stepDefinations;
+
+import cucumber.api.DataTable;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.And;
+import cucumber.api.junit.Cucumber;
+import pageObjects.fedexElements;
+import utilities.base;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+public class stepDefination extends base {
+	@Given("^User Launch Chrome Browser$")
+	public void user_launch_chrome_browser() throws Throwable {
+		driver = intializeDriver();
+		driver.get(prop.getProperty("url"));
+
+	}
+
+	@When("^User opens Fedex Registration page URL \"([^\"]*)\"$")
+	public void user_opens_fedex_registration_page_url_something(String strArg1) throws Throwable {
+		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+	}
+
+	@When("^User enters following required information for registration$")
+	public void user_enters_following_required_information_for_registration(DataTable data) throws Throwable {
+		List<List<String>> obj = data.raw();
+		fedexElements fde = new fedexElements(driver);
+		fde.getFirstname().sendKeys(obj.get(0).get(0));
+		fde.getLastname().sendKeys(obj.get(0).get(1));
+		fde.getEmail().sendKeys(obj.get(0).get(2));
+		fde.getReemail().sendKeys(obj.get(0).get(3));
+		fde.getAddress().sendKeys(obj.get(0).get(4));
+		fde.getCity().sendKeys(obj.get(0).get(5));
+		fde.getPostal().sendKeys(obj.get(0).get(6));
+		fde.getPhone().sendKeys(obj.get(0).get(7));
+		fde.getUserid().sendKeys(obj.get(0).get(8));
+		fde.getPassword().sendKeys(obj.get(0).get(9));
+		fde.getRepassword().sendKeys(obj.get(0).get(10));
+		fde.getSecanswer().sendKeys(obj.get(0).get(11));
+
+	}
+
+	@When("^User add remaining information for State, Country, Secret question$")
+	public void user_add_remaining_information_for_state_country_secret_question() throws Throwable {
+
+	}
+
+	@When("^User choose \"([^\"]*)\" tab$")
+	public void user_choose_something_tab(String strArg1) throws Throwable {
+
+	}
+
+	@Then("^complete registration by clicking on continue tab$")
+	public void complete_registration_by_clicking_on_continue_tab() throws Throwable {
+
+	}
+
+}

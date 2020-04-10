@@ -1,0 +1,29 @@
+package dpHybridmodel;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import Utilities.browsers;
+import resources.pageElements;
+
+public class digitapointLogin extends browsers{
+
+	public static void main() throws IOException {
+		driver = intializeDriver();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("url"));
+		String title = driver.getTitle();
+		System.out.println("The page title is: " + title);
+
+	}
+	
+	public static void userLoginpage() throws IOException
+	{
+		driver = intializeDriver();
+		driver.get(prop.getProperty("url"));
+		pageElements pe=new pageElements(driver);
+		pe.getUserlogin().click();
+	}
+
+}

@@ -1,0 +1,64 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageObjects.signUpelements;
+
+public class HomePageValidation {
+
+	WebDriver driver;
+
+	@BeforeTest
+	public void homePage() {
+		System.setProperty("webdriver.chrome.driver", "C:\\automation\\drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/");
+		String title = driver.getTitle();
+		System.out.println("the page title is: " + title);
+
+	}
+
+	@Test(priority = 1)
+	public void PageValidation() {
+
+		String title = driver.getTitle();
+		System.out.println("the page title is: " + title);
+		signUpelements sp = new signUpelements(driver);
+		sp.getFirstname().sendKeys("samrat");
+
+	}
+
+	@Test(priority = 2)
+	public void dropDown() {
+		WebElement month = driver.findElement(By.id("month"));
+		WebElement day = driver.findElement(By.id("month"));
+		WebElement year = driver.findElement(By.id("year"));
+
+		Select sel1 = new Select(month);
+
+		sel1.selectByIndex(7);
+		List<WebElement> listmonths = sel1.getOptions();
+		System.out.println(listmonths.size());
+		int Totalmonths = listmonths.size() - 1;
+		System.out.println("Total months are: " + Totalmonths);
+
+		for (int i = 0; i < listmonths.size(); i++) {
+			String monthValue = listmonths.get(i).getText();
+			System.out.println(monthValue);
+		}
+
+	}
+
+	/*
+	 * @AfterMethod public void tearDown() { driver.quit(); }
+	 */
+
+}

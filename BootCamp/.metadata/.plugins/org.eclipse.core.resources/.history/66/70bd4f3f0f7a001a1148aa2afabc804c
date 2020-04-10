@@ -1,0 +1,16 @@
+Feature: Fedex Regirstration
+
+Scenario: Complete Fedex registration process
+Given User Launch Chrome browser
+When User open Fedex reristration page
+And User enters the registration page with the following information
+| Samrat | Chowdhury | xyz@gmail.com | xyz@gmail.com | 55 Martindale Court NE | Calgary | 
+And User Select State/province and Select Country
+And User add ZIP/Postal
+And User Add phone no
+When User create Login information use following information
+| Samrat | Sam1234@ | Sam1234@ |
+And User Add secret question and answer
+And User Clicked on both button Terms and Conditions
+And User choose the option open a Fedex account
+Then User finish the registration process

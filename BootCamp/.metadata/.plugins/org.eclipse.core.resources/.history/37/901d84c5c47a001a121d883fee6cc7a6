@@ -1,0 +1,54 @@
+package stepDefinations;
+
+import cucumber.api.DataTable;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.And;
+import cucumber.api.junit.Cucumber;
+import utilities.base;
+
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+public class stepDefination extends base{
+
+	@Given("^User Launch Chrome Browser$")
+	public void user_Launch_Chrome_Browser() throws Throwable {
+	   System.out.println("hello");
+	}
+
+	@When("^User opens Fedex Registration page URL \"([^\"]*)\"$")
+	public void user_opens_Fedex_Registration_page_URL(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("my");
+	}
+
+	/*@When("^User enters following required information for registration$")
+	public void user_enters_following_required_information_for_registration(DataTable arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
+	    throw new PendingException();
+	}*/
+
+	@When("^User add remaining information for State, Country, Secret question$")
+	public void user_add_remaining_information_for_State_Country_Secret_question() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("is");
+	}
+
+	@When("^User choose \"([^\"]*)\" tab$")
+	public void user_choose_tab(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("ayansh");
+	}
+
+	@Then("^complete registration by clicking on continue tab$")
+	public void complete_registration_by_clicking_on_continue_tab() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("chowdhury");
+	}
+}

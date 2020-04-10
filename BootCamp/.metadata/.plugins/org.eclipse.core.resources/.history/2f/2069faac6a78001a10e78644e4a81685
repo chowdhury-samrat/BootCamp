@@ -1,0 +1,43 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class fbHomepageelements {
+
+	public WebDriver driver;
+	
+	
+	
+    @FindBy(xpath="//input[@id='u_0_w']")
+	WebElement firstname;
+	@FindBy(xpath="//input[@id='u_0_o']")
+	WebElement lastname;
+	@FindBy(xpath="//input[@id='u_0_r']")
+	WebElement mobilenumber;
+	@FindBy(xpath="//input[@id='u_0_w']")
+	WebElement password;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public WebElement getFirstname()
+	{
+		return firstname;
+	}
+
+	
+}

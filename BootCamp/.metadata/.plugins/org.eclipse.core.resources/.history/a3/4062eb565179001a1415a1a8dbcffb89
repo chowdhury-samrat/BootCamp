@@ -1,0 +1,59 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class HomePageElements {
+
+	WebDriver driver;
+	
+By email=By.xpath("//input[@id='email']");
+By password=By.name("pass");
+By forgotaccount=By.linkText("Forgot account?");
+By login=By.xpath("//*[@id=\'u_0_b\']");
+
+By firstname=By.xpath("//input[@id='u_0_m']");
+By lastname=By.xpath("//input[@id='u_0_o']");
+By mobilenumber=By.xpath("//input[@id='u_0_r']");
+By password1=By.xpath("//input[@id='u_0_o']");
+
+
+By create=By.xpath("//a[@class='_8esh']");
+
+
+	
+	
+public HomePageElements(WebDriver driver) {
+
+	this.driver=driver;
+}
+
+	public WebElement getFirstname()
+	{
+		return driver.findElement(firstname);
+	}
+public WebElement getEmail()
+{
+	return driver.findElement(email);
+}
+public WebElement getPassword()
+{
+	return driver.findElement(password);
+}
+public WebElement getForgotaccount()
+{
+	return driver.findElement(forgotaccount);
+}
+public WebElement getLogin()
+{
+	return driver.findElement(login);
+}
+	
+public WebElement getCreate()
+{
+	return driver.findElement(create);
+}
+}

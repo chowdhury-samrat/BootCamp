@@ -1,0 +1,84 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class HomePageElements {
+
+	WebDriver driver;
+	
+By email=By.xpath("//input[@id='email']");
+By password=By.name("pass");
+By forgotaccount=By.linkText("Forgot account?");
+By login=By.xpath("//input[@id='u_0_b']");
+
+By firstname=By.xpath("//input[@id='u_0_m']");
+By lastname=By.xpath("//input[@id='u_0_o']");
+By mobileEmail=By.xpath("//input[@id='u_0_r']");
+By password1=By.xpath("//input[@id='u_0_o']");
+
+
+By create=By.xpath("//a[@class='_8esh']");
+
+By signup=By.xpath("//button[@id='u_0_13']");
+
+
+	
+	
+public HomePageElements(WebDriver driver) {
+
+	this.driver=driver;
+}
+
+	
+public WebElement getEmail()
+{
+	return driver.findElement(email);
+}
+public WebElement getPassword()
+{
+	return driver.findElement(password);
+}
+public WebElement getForgotaccount()
+{
+	return driver.findElement(forgotaccount);
+}
+public WebElement getLogin()
+{
+	return driver.findElement(login);
+}
+	
+public WebElement getCreate()
+{
+	return driver.findElement(create);
+}
+
+public WebElement getFirstname()
+{
+	return driver.findElement(firstname);
+}
+
+
+public WebElement getLastname()
+{
+	return driver.findElement(lastname);
+}
+public WebElement getMobileEmail()
+{
+	return driver.findElement(mobileEmail);
+}
+
+public WebElement getPassword1()
+{
+	return driver.findElement(password1);
+}
+public WebElement getSignup()
+{
+	return driver.findElement(signup);
+}
+
+
+}

@@ -1,0 +1,18 @@
+package dpHybridmodel;
+
+import java.io.IOException;
+
+import Utilities.browsers;
+
+public class T02_loginPage extends browsers {
+
+	public static void main() throws IOException {
+		driver = intializeDriver();
+		driver.get(prop.getProperty("url"));
+
+	}
+public static void userLogin()
+{
+	
+}
+}
